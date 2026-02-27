@@ -43,6 +43,7 @@
         tooltip.innerHTML = `
             <div class="sitemap-tooltip__card">
                 <div class="sitemap-tooltip__arrow"></div>
+                <button class="sitemap-tooltip__close" aria-label="Close">&times;</button>
                 <img class="sitemap-tooltip__img" src="" alt="" />
                 <div class="sitemap-tooltip__body">
                     <div class="sitemap-tooltip__plot"></div>
@@ -167,13 +168,30 @@
 
         plots.forEach(plot => {
             if (isTouchDevice) {
+                // Track touch position to distinguish taps from swipes
+                let touchStartX = 0;
+                let touchStartY = 0;
+
+                plot.addEventListener('touchstart', (e) => {
+                    touchStartX = e.touches[0].clientX;
+                    touchStartY = e.touches[0].clientY;
+                }, { passive: true });
+
                 plot.addEventListener('touchend', (e) => {
-                    e.preventDefault();
-                    if (activeTooltip === plot) {
-                        hideTooltip();
-                    } else {
-                        showTooltip(plot);
+                    const touch = e.changedTouches[0];
+                    const dx = Math.abs(touch.clientX - touchStartX);
+                    const dy = Math.abs(touch.clientY - touchStartY);
+
+                    // Only treat as a tap if finger barely moved (< 10px)
+                    if (dx < 10 && dy < 10) {
+                        e.preventDefault();
+                        if (activeTooltip === plot) {
+                            hideTooltip();
+                        } else {
+                            showTooltip(plot);
+                        }
                     }
+                    // Otherwise it was a swipe — let it scroll naturally
                 });
             } else {
                 plot.addEventListener('mouseenter', () => showTooltip(plot));
@@ -194,6 +212,18 @@
                     hideTooltip();
                 }
             });
+        });
+
+        // Close button handler (for touch devices)
+        const closeBtn = tooltip.querySelector('.sitemap-tooltip__close');
+        closeBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            hideTooltip();
+        });
+        closeBtn.addEventListener('touchend', (e) => {
+            e.stopPropagation();
+            e.preventDefault();
+            hideTooltip();
         });
 
         // Dismiss on click outside
