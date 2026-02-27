@@ -8,6 +8,7 @@
         content="Explore Vivly Living developments — new build homes in Shepley, Skelmanthorpe, and Denby Dale. First Homes scheme available.">
     <title>Our Developments — Vivly Living</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sitemap.css">
     <link rel="icon" type="image/svg+xml"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80'>🏠</text></svg>">
 </head>
@@ -81,6 +82,418 @@
                     </div>
                     <a href="contact.html" class="btn btn--primary">Enquire About This Development</a>
                 </div>
+            </div>
+
+            <!-- Knowle Grange Interactive Site Map -->
+            <div class="sitemap reveal" data-development="knowle-grange">
+                <div class="sitemap__layout">
+                    <!-- KEY PANEL -->
+                    <div class="sitemap__key">
+                        <div class="sitemap__key-header">
+                            <div class="sitemap__key-label">Explore</div>
+                            <div class="sitemap__key-title">Knowle Grange</div>
+                        </div>
+                        <ul class="sitemap__key-list">
+                            <li class="sitemap__key-item">
+                                <span class="sitemap__key-swatch sitemap__key-swatch--4bed">
+                                    <svg viewBox="0 0 20 16">
+                                        <path d="M2,14 L2,6 L10,1 L18,6 L18,14 Z" fill="none" stroke="#7a6a5a"
+                                            stroke-width="1.5" />
+                                    </svg>
+                                </span>
+                                <div>
+                                    <div class="sitemap__key-name">The Wisteria</div>
+                                    <div class="sitemap__key-type">4 Bedroom Detached</div>
+                                </div>
+                                <div class="sitemap__key-plots">1, 2, 12, 18, 25</div>
+                            </li>
+                            <li class="sitemap__key-item">
+                                <span class="sitemap__key-swatch sitemap__key-swatch--3bed">
+                                    <svg viewBox="0 0 20 16">
+                                        <path d="M2,14 L2,6 L10,1 L18,6 L18,14 Z" fill="none" stroke="#7a6a5a"
+                                            stroke-width="1.5" />
+                                    </svg>
+                                </span>
+                                <div>
+                                    <div class="sitemap__key-name">The Birch</div>
+                                    <div class="sitemap__key-type">3 Bedroom Semi-Detached</div>
+                                </div>
+                                <div class="sitemap__key-plots">3, 4, 7, 8, 13, 14, 19</div>
+                            </li>
+                            <li class="sitemap__key-item">
+                                <span class="sitemap__key-swatch sitemap__key-swatch--3bed">
+                                    <svg viewBox="0 0 20 16">
+                                        <path d="M2,14 L2,6 L10,1 L18,6 L18,14 Z" fill="none" stroke="#7a6a5a"
+                                            stroke-width="1.5" />
+                                    </svg>
+                                </span>
+                                <div>
+                                    <div class="sitemap__key-name">The Rowan</div>
+                                    <div class="sitemap__key-type">3 Bedroom Detached</div>
+                                </div>
+                                <div class="sitemap__key-plots">17, 23</div>
+                            </li>
+                            <li class="sitemap__key-item">
+                                <span class="sitemap__key-swatch sitemap__key-swatch--2bed">
+                                    <svg viewBox="0 0 20 16">
+                                        <path d="M2,14 L2,6 L10,1 L18,6 L18,14 Z" fill="none" stroke="#7a6a5a"
+                                            stroke-width="1.5" />
+                                    </svg>
+                                </span>
+                                <div>
+                                    <div class="sitemap__key-name">The Sessile</div>
+                                    <div class="sitemap__key-type">2 Bedroom Semi-Detached</div>
+                                </div>
+                                <div class="sitemap__key-plots">5, 6, 15, 16, 21, 26</div>
+                            </li>
+                        </ul>
+                        <div class="sitemap__key-status">
+                            <div class="sitemap__key-status-title">Availability</div>
+                            <div class="sitemap__status-row">
+                                <span class="sitemap__status-indicator sitemap__status-indicator--available"></span>
+                                Available
+                            </div>
+                            <div class="sitemap__status-row">
+                                <span class="sitemap__status-indicator sitemap__status-indicator--reserved"></span>
+                                Reserved
+                            </div>
+                            <div class="sitemap__status-row">
+                                <span class="sitemap__status-indicator sitemap__status-indicator--sold"></span>
+                                Sold
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MAP AREA -->
+                    <div class="sitemap__map-area">
+                        <div class="sitemap__canvas">
+                            <svg viewBox="0 0 800 560" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <filter id="plotShadow">
+                                        <feDropShadow dx="0.5" dy="1" stdDeviation="1.5" flood-opacity="0.1" />
+                                    </filter>
+                                </defs>
+
+                                <!-- === BACKGROUND & SURROUNDING CONTEXT === -->
+                                <!-- Surrounding area (light grey) -->
+                                <rect x="0" y="0" width="800" height="560" fill="#eae8e3" />
+
+                                <!-- Perimeter road (wraps around south & east) -->
+                                <path class="map-road map-road--outline"
+                                    d="M 0,510 L 100,510 Q 145,510 170,490 L 360,380 Q 400,360 440,355 L 620,310 Q 680,290 720,240 L 780,160" />
+                                <path class="map-road"
+                                    d="M 0,510 L 100,510 Q 145,510 170,490 L 360,380 Q 400,360 440,355 L 620,310 Q 680,290 720,240 L 780,160" />
+
+                                <!-- Existing properties (west side, outside boundary) -->
+                                <g opacity="0.25">
+                                    <rect x="0" y="335" width="60" height="50" rx="2" fill="#c8c0b0" stroke="#b0a890"
+                                        stroke-width="0.8" />
+                                    <rect x="0" y="400" width="55" height="45" rx="2" fill="#c8c0b0" stroke="#b0a890"
+                                        stroke-width="0.8" />
+                                    <rect x="0" y="460" width="50" height="40" rx="2" fill="#c8c0b0" stroke="#b0a890"
+                                        stroke-width="0.8" />
+                                </g>
+                                <text class="map-label map-label--area" x="30" y="430" text-anchor="middle"
+                                    transform="rotate(-90, 30, 430)" opacity="0.4">Existing Properties</text>
+
+                                <!-- === SITE BOUNDARY === -->
+                                <!-- Green boundary / development area -->
+                                <polygon fill="#d8e8ca" stroke="#b5c8a0" stroke-width="1.5"
+                                    points="90,100 550,30 740,170 650,330 400,370 160,500 80,500" />
+
+                                <!-- Internal green lawns / gardens -->
+                                <polygon fill="#c5deb2" opacity="0.6"
+                                    points="100,115 540,45 720,180 640,320 390,358 155,485 90,485" />
+
+                                <!-- Green open space (top-right with trees) -->
+                                <polygon fill="#b8d4a0" opacity="0.5"
+                                    points="480,40 550,30 740,170 680,220 560,180 480,120" />
+                                <text class="map-label map-label--area" x="610" y="120" text-anchor="middle">Open Green
+                                    Space</text>
+
+                                <!-- === INTERNAL SHARED SURFACE / COURT === -->
+                                <!-- Main shared driveway (the large central paved area) -->
+                                <polygon fill="#e0cdb0" stroke="#d0bfa0" stroke-width="1" opacity="0.7"
+                                    points="180,165 450,115 520,175 510,265 400,310 250,345 160,380 130,310 145,230" />
+
+                                <!-- Access road from perimeter into site -->
+                                <path fill="none" stroke="#d5c8b0" stroke-width="16" stroke-linecap="round"
+                                    d="M 200,460 Q 195,420 190,380 Q 185,350 195,310 L 210,260" />
+                                <path fill="none" stroke="#e0d5c0" stroke-width="12" stroke-linecap="round"
+                                    d="M 200,460 Q 195,420 190,380 Q 185,350 195,310 L 210,260" />
+
+                                <!-- Road label -->
+                                <text class="map-label map-label--road" x="165" y="420"
+                                    transform="rotate(-80, 165, 420)" text-anchor="middle">ACCESS</text>
+
+                                <!-- Parking bays (small rects in the shared surface) -->
+                                <g opacity="0.3">
+                                    <rect x="240" y="230" width="8" height="14" rx="1" fill="#c5b595" />
+                                    <rect x="252" y="230" width="8" height="14" rx="1" fill="#c5b595" />
+                                    <rect x="264" y="230" width="8" height="14" rx="1" fill="#c5b595" />
+                                    <rect x="276" y="230" width="8" height="14" rx="1" fill="#c5b595" />
+                                    <rect x="288" y="230" width="8" height="14" rx="1" fill="#c5b595" />
+                                    <rect x="340" y="215" width="8" height="14" rx="1" fill="#c5b595" />
+                                    <rect x="352" y="213" width="8" height="14" rx="1" fill="#c5b595" />
+                                    <rect x="364" y="211" width="8" height="14" rx="1" fill="#c5b595" />
+                                </g>
+
+                                <!-- === PLOTS - NORTH ROW (top of site, facing south) === -->
+
+                                <!-- Plot 5 - Sessile 2bed (top-left, pink) -->
+                                <g class="plot plot--2bed plot--reserved" data-plot="5" tabindex="0"
+                                    filter="url(#plotShadow)">
+                                    <rect class="plot__shape" x="170" y="108" width="45" height="40" rx="3"
+                                        transform="rotate(-6, 193, 128)" />
+                                    <text class="plot__number" x="193" y="132">5</text>
+                                </g>
+
+                                <!-- Plot 6 - Sessile 2bed (pink) -->
+                                <g class="plot plot--2bed plot--sold" data-plot="6" tabindex="0"
+                                    filter="url(#plotShadow)">
+                                    <rect class="plot__shape" x="225" y="102" width="45" height="40" rx="3"
+                                        transform="rotate(-6, 248, 122)" />
+                                    <text class="plot__number" x="248" y="126">6</text>
+                                </g>
+
+                                <!-- Plot 1 - Wisteria 4bed (large, gold) -->
+                                <g class="plot plot--4bed plot--available" data-plot="1" tabindex="0"
+                                    filter="url(#plotShadow)">
+                                    <rect class="plot__shape" x="120" y="165" width="55" height="48" rx="3"
+                                        transform="rotate(-5, 148, 189)" />
+                                    <text class="plot__number" x="148" y="193">1</text>
+                                    <circle class="plot__pulse" cx="171" cy="169" r="3" fill="#3a8c55" />
+                                </g>
+
+                                <!-- Plot 2 - Wisteria 4bed (large, gold) -->
+                                <g class="plot plot--4bed plot--available" data-plot="2" tabindex="0"
+                                    filter="url(#plotShadow)">
+                                    <rect class="plot__shape" x="120" y="230" width="55" height="48" rx="3"
+                                        transform="rotate(-3, 148, 254)" />
+                                    <text class="plot__number" x="148" y="258">2</text>
+                                    <circle class="plot__pulse" cx="171" cy="234" r="3" fill="#3a8c55" />
+                                </g>
+
+                                <!-- === PLOTS - UPPER-RIGHT (east side, facing green space) === -->
+
+                                <!-- Plot 3 - Birch 3bed -->
+                                <g class="plot plot--3bed plot--sold" data-plot="3" tabindex="0"
+                                    filter="url(#plotShadow)">
+                                    <rect class="plot__shape" x="320" y="82" width="50" height="44" rx="3"
+                                        transform="rotate(-8, 345, 104)" />
+                                    <text class="plot__number" x="345" y="108">3</text>
+                                </g>
+
+                                <!-- Plot 4 - Birch 3bed -->
+                                <g class="plot plot--3bed plot--sold" data-plot="4" tabindex="0"
+                                    filter="url(#plotShadow)">
+                                    <rect class="plot__shape" x="380" y="75" width="50" height="44" rx="3"
+                                        transform="rotate(-8, 405, 97)" />
+                                    <text class="plot__number" x="405" y="101">4</text>
+                                </g>
+
+                                <!-- Plot 7 - Birch 3bed (right side, near green) -->
+                                <g class="plot plot--3bed plot--available" data-plot="7" tabindex="0"
+                                    filter="url(#plotShadow)">
+                                    <rect class="plot__shape" x="510" y="120" width="50" height="44" rx="3"
+                                        transform="rotate(-15, 535, 142)" />
+                                    <text class="plot__number" x="535" y="146">7</text>
+                                    <circle class="plot__pulse" cx="556" cy="124" r="3" fill="#3a8c55" />
+                                </g>
+
+                                <!-- Plot 8 - Birch 3bed (right side, further south) -->
+                                <g class="plot plot--3bed plot--available" data-plot="8" tabindex="0"
+                                    filter="url(#plotShadow)">
+                                    <rect class="plot__shape" x="520" y="175" width="50" height="44" rx="3"
+                                        transform="rotate(-18, 545, 197)" />
+                                    <text class="plot__number" x="545" y="201">8</text>
+                                    <circle class="plot__pulse" cx="566" cy="179" r="3" fill="#3a8c55" />
+                                </g>
+
+                                <!-- === PLOTS - EAST ROW (right, middle of site) === -->
+
+                                <!-- Plot 15 - Sessile 2bed -->
+                                <g class="plot plot--2bed plot--available" data-plot="15" tabindex="0"
+                                    filter="url(#plotShadow)">
+                                    <rect class="plot__shape" x="500" y="235" width="45" height="40" rx="3"
+                                        transform="rotate(-20, 523, 255)" />
+                                    <text class="plot__number" x="523" y="259">15</text>
+                                    <circle class="plot__pulse" cx="541" cy="239" r="3" fill="#3a8c55" />
+                                </g>
+
+                                <!-- Plot 16 - Sessile 2bed -->
+                                <g class="plot plot--2bed plot--available" data-plot="16" tabindex="0"
+                                    filter="url(#plotShadow)">
+                                    <rect class="plot__shape" x="475" y="275" width="45" height="40" rx="3"
+                                        transform="rotate(-22, 498, 295)" />
+                                    <text class="plot__number" x="498" y="299">16</text>
+                                    <circle class="plot__pulse" cx="516" cy="279" r="3" fill="#3a8c55" />
+                                </g>
+
+                                <!-- === PLOTS - CENTRE (around shared surface) === -->
+
+                                <!-- Plot 12 - Wisteria 4bed -->
+                                <g class="plot plot--4bed plot--available" data-plot="12" tabindex="0"
+                                    filter="url(#plotShadow)">
+                                    <rect class="plot__shape" x="260" y="140" width="55" height="48" rx="3"
+                                        transform="rotate(-6, 288, 164)" />
+                                    <text class="plot__number" x="288" y="168">12</text>
+                                    <circle class="plot__pulse" cx="311" cy="144" r="3" fill="#3a8c55" />
+                                </g>
+
+                                <!-- Plot 13 - Birch 3bed -->
+                                <g class="plot plot--3bed plot--available" data-plot="13" tabindex="0"
+                                    filter="url(#plotShadow)">
+                                    <rect class="plot__shape" x="350" y="135" width="50" height="44" rx="3"
+                                        transform="rotate(-10, 375, 157)" />
+                                    <text class="plot__number" x="375" y="161">13</text>
+                                    <circle class="plot__pulse" cx="396" cy="139" r="3" fill="#3a8c55" />
+                                </g>
+
+                                <!-- Plot 14 - Birch 3bed -->
+                                <g class="plot plot--3bed plot--reserved" data-plot="14" tabindex="0"
+                                    filter="url(#plotShadow)">
+                                    <rect class="plot__shape" x="420" y="140" width="50" height="44" rx="3"
+                                        transform="rotate(-12, 445, 162)" />
+                                    <text class="plot__number" x="445" y="166">14</text>
+                                </g>
+
+                                <!-- === PLOTS - SOUTH ROW (bottom of site, around cul-de-sac) === -->
+
+                                <!-- Plot 17 - Rowan 3bed -->
+                                <g class="plot plot--3bed plot--available" data-plot="17" tabindex="0"
+                                    filter="url(#plotShadow)">
+                                    <rect class="plot__shape" x="330" y="275" width="50" height="44" rx="3"
+                                        transform="rotate(-15, 355, 297)" />
+                                    <text class="plot__number" x="355" y="301">17</text>
+                                    <circle class="plot__pulse" cx="376" cy="279" r="3" fill="#3a8c55" />
+                                </g>
+
+                                <!-- Plot 18 - Wisteria 4bed -->
+                                <g class="plot plot--4bed plot--available" data-plot="18" tabindex="0"
+                                    filter="url(#plotShadow)">
+                                    <rect class="plot__shape" x="390" y="280" width="55" height="48" rx="3"
+                                        transform="rotate(-18, 418, 304)" />
+                                    <text class="plot__number" x="418" y="308">18</text>
+                                    <circle class="plot__pulse" cx="441" cy="284" r="3" fill="#3a8c55" />
+                                </g>
+
+                                <!-- Plot 19 - Birch 3bed -->
+                                <g class="plot plot--3bed plot--sold" data-plot="19" tabindex="0"
+                                    filter="url(#plotShadow)">
+                                    <rect class="plot__shape" x="235" y="285" width="50" height="44" rx="3"
+                                        transform="rotate(-5, 260, 307)" />
+                                    <text class="plot__number" x="260" y="311">19</text>
+                                </g>
+
+                                <!-- Plot 21 - Sessile 2bed -->
+                                <g class="plot plot--2bed plot--available" data-plot="21" tabindex="0"
+                                    filter="url(#plotShadow)">
+                                    <rect class="plot__shape" x="220" y="340" width="45" height="40" rx="3"
+                                        transform="rotate(-3, 243, 360)" />
+                                    <text class="plot__number" x="243" y="364">21</text>
+                                    <circle class="plot__pulse" cx="261" cy="344" r="3" fill="#3a8c55" />
+                                </g>
+
+                                <!-- Plot 23 - Rowan 3bed -->
+                                <g class="plot plot--3bed plot--available" data-plot="23" tabindex="0"
+                                    filter="url(#plotShadow)">
+                                    <rect class="plot__shape" x="160" y="340" width="50" height="44" rx="3"
+                                        transform="rotate(-2, 185, 362)" />
+                                    <text class="plot__number" x="185" y="366">23</text>
+                                    <circle class="plot__pulse" cx="206" cy="344" r="3" fill="#3a8c55" />
+                                </g>
+
+                                <!-- Plot 25 - Wisteria 4bed -->
+                                <g class="plot plot--4bed plot--available" data-plot="25" tabindex="0"
+                                    filter="url(#plotShadow)">
+                                    <rect class="plot__shape" x="110" y="375" width="55" height="48" rx="3"
+                                        transform="rotate(5, 138, 399)" />
+                                    <text class="plot__number" x="138" y="403">25</text>
+                                    <circle class="plot__pulse" cx="161" cy="379" r="3" fill="#3a8c55" />
+                                </g>
+
+                                <!-- Plot 26 - Sessile 2bed -->
+                                <g class="plot plot--2bed plot--available" data-plot="26" tabindex="0"
+                                    filter="url(#plotShadow)">
+                                    <rect class="plot__shape" x="110" y="305" width="45" height="40" rx="3"
+                                        transform="rotate(2, 133, 325)" />
+                                    <text class="plot__number" x="133" y="329">26</text>
+                                    <circle class="plot__pulse" cx="151" cy="309" r="3" fill="#3a8c55" />
+                                </g>
+
+                                <!-- === LANDSCAPING === -->
+                                <!-- Boundary trees (top-right green space) -->
+                                <g class="map-tree">
+                                    <circle cx="520" cy="55" r="9" />
+                                    <circle cx="555" cy="42" r="7" />
+                                    <circle cx="590" cy="50" r="8" />
+                                    <circle cx="625" cy="58" r="10" />
+                                    <circle cx="660" cy="80" r="8" />
+                                    <circle cx="690" cy="110" r="9" />
+                                    <circle cx="710" cy="150" r="7" />
+                                    <circle cx="700" cy="190" r="8" />
+                                </g>
+                                <!-- Additional boundary trees (northeast) -->
+                                <g class="map-tree map-tree--light">
+                                    <circle cx="540" cy="75" r="6" />
+                                    <circle cx="575" cy="68" r="5" />
+                                    <circle cx="645" cy="70" r="6" />
+                                    <circle cx="675" cy="95" r="7" />
+                                    <circle cx="720" cy="175" r="6" />
+                                </g>
+
+                                <!-- Trees along north boundary -->
+                                <g class="map-tree map-tree--dark">
+                                    <circle cx="110" cy="95" r="6" />
+                                    <circle cx="145" cy="88" r="7" />
+                                    <circle cx="280" cy="80" r="6" />
+                                    <circle cx="440" cy="55" r="7" />
+                                    <circle cx="470" cy="50" r="6" />
+                                </g>
+
+                                <!-- Trees along west/south-west boundary -->
+                                <g class="map-tree">
+                                    <circle cx="85" cy="140" r="5" />
+                                    <circle cx="80" cy="200" r="6" />
+                                    <circle cx="80" cy="270" r="5" />
+                                    <circle cx="85" cy="430" r="6" />
+                                    <circle cx="105" cy="460" r="7" />
+                                </g>
+
+                                <!-- Internal garden trees (between plots) -->
+                                <g class="map-tree map-tree--light">
+                                    <circle cx="210" y="168" r="5" />
+                                    <circle cx="305" cy="110" r="5" />
+                                    <circle cx="480" cy="105" r="5" />
+                                    <circle cx="320" cy="200" r="4" />
+                                    <circle cx="195" cy="290" r="4" />
+                                    <circle cx="300" cy="350" r="5" />
+                                </g>
+
+                                <!-- Compass indicator -->
+                                <g transform="translate(25, 20)" opacity="0.5">
+                                    <circle cx="15" cy="18" r="14" fill="none" stroke="#a09888" stroke-width="1" />
+                                    <text x="15" y="10" text-anchor="middle" font-family="Inter, sans-serif"
+                                        font-size="9" font-weight="700" fill="#8a7e6a">N</text>
+                                    <line x1="15" y1="12" x2="15" y2="24" stroke="#a09888" stroke-width="0.8" />
+                                    <polygon points="15,8 12.5,13 17.5,13" fill="#a09888" />
+                                </g>
+
+                                <!-- Scale bar -->
+                                <g transform="translate(665, 530)" opacity="0.4">
+                                    <line x1="0" y1="0" x2="80" y2="0" stroke="#8a7e6a" stroke-width="1" />
+                                    <line x1="0" y1="-3" x2="0" y2="3" stroke="#8a7e6a" stroke-width="1" />
+                                    <line x1="80" y1="-3" x2="80" y2="3" stroke="#8a7e6a" stroke-width="1" />
+                                    <text x="40" y="12" text-anchor="middle" font-family="Inter, sans-serif"
+                                        font-size="7" fill="#8a7e6a">Indicative Scale</text>
+                                </g>
+
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <p class="sitemap__scroll-hint">↔ Swipe to explore the site plan</p>
             </div>
 
             <!-- Knowle Grange Properties -->
@@ -413,6 +826,7 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/sitemap.js"></script>
 </body>
 
 </html>
