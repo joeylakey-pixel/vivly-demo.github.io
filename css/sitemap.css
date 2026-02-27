@@ -630,8 +630,13 @@
 
 /* --- Responsive --- */
 @media (max-width: 900px) {
+    .sitemap {
+        overflow: visible;
+    }
+
     .sitemap__layout {
         grid-template-columns: 1fr;
+        min-width: 0;
     }
 
     .sitemap__key {
@@ -654,17 +659,20 @@
 
     .sitemap__map-area {
         padding: 0.5rem;
-        overflow: auto;
+        min-width: 0;
+        overflow-x: auto;
+        overflow-y: visible;
         -webkit-overflow-scrolling: touch;
     }
 
     .sitemap__canvas {
         min-height: 320px;
-        min-width: 550px;
+        width: 600px;
     }
 
     .sitemap__canvas svg {
-        min-width: 550px;
+        width: 600px;
+        height: auto;
     }
 }
 
